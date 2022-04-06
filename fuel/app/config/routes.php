@@ -39,4 +39,8 @@ return array(
 	 */
 
 	'hello(/:name)?' => array('welcome/hello', 'name' => 'hello'),
+	'student/add' => array('students/change', 'name' => 'student.add'),
+	'student/edit/(:any)' => array('students/change/$1', 'name' => 'student.edit'),
+	'student/delete/(:any)' => array('students/delete/$1', 'name' => 'student.delete'),
+	'student/(:any)' => array('students/view/$1', 'name' => 'student.view'),
 );
